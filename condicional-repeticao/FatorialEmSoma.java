@@ -9,16 +9,19 @@ public class FatorialEmSoma {
         //cria scanner
         Scanner scanner = new Scanner(System.in);
 
-        //leia um número N
-        System.out.print("Digite um número inteiro não negativo: ");
-        int n = scanner.nextInt();
+        //variavel numero
+        int n;
 
         //verifica se o número é negativo
-        if (n < 0) {
-            System.out.println("Número inválido! Por favor, digite um número inteiro não negativo.");
-            scanner.close();
-            return;
-        }
+        do{
+            //leia um número N
+            System.out.print("Digite um número inteiro não negativo: ");
+            n = scanner.nextInt();
+
+            if (n < 0) {
+                System.out.println("Número inválido! Por favor, digite um número inteiro não negativo.");
+            }
+        } while (n < 0);
 
         //inicializa o fatorial como 1
         int fatorial = 1;
